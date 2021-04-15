@@ -35,8 +35,7 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    filename.chomp
-    filename.split(' - ')
+    artist_name, name = filename.chom('.mp3').split(' - ')
   end
 
   def save
