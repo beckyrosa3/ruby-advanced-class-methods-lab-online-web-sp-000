@@ -32,11 +32,16 @@ class Song
 
   def self.alphabetical
     self.all.sort_by {|song| song.name}
-end
+  end
+
+  def self.new_from_filename(filename)
+    filename.chomp
+    filename.split(' - ')
+  end
+
   def save
     self.class.all << self
     self
   end
-
 
 end
